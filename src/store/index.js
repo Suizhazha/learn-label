@@ -3,9 +3,11 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+console.log(Vuex)
+
 export default new Vuex.Store({
   state: {
-    count:63
+    count:5
   },
   mutations: {
     add(){
@@ -14,7 +16,9 @@ export default new Vuex.Store({
   },
   actions: {
     add(context){
-      context.commit('add')
+      setTimeout(()=>{
+        context.commit('add')
+      },2000)
     }
   },
   modules: {
